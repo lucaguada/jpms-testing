@@ -1,0 +1,4 @@
+--patch-module
+com.acme.app=_
+--add-reads
+com.acme.app=ALL-UNNAMED
