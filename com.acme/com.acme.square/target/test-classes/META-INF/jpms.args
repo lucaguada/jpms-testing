@@ -1,4 +1,0 @@
---patch-module
-com.acme.square=_
---add-reads
-com.acme.square=ALL-UNNAMED

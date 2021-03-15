@@ -1,4 +1,0 @@
---patch-module
-com.acme.rectangle=_
---add-reads
-com.acme.rectangle=ALL-UNNAMED

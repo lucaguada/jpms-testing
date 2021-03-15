@@ -1,4 +1,0 @@
---patch-module
-com.acme.api=_
---add-reads
-com.acme.api=ALL-UNNAMED
