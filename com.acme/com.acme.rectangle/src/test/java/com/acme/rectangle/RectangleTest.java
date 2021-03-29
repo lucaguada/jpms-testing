@@ -1,14 +1,20 @@
 package com.acme.rectangle;
 
+import com.acme.api.Shape;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static java.util.ServiceLoader.load;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RectangleTest {
+class RectangleTest {
   @Test
-  public void shouldComputeArea() {
-    final var shape = new Rectangle();
-
-    assertEquals(shape.area(), 32);
+  void shouldComputeArea() {
+    load(Shape.class)
+      .findFirst()
+      .ifPresentOrElse(
+        it -> assertEquals(it.area(), 32),
+        () -> Assertions.fail("Can't find shape")
+      );
   }
 }
